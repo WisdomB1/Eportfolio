@@ -288,7 +288,7 @@ nav{
     flex-wrap: wrap;
 }
 .language{
-    width:25%;
+    width:20%;
     display: flex;
     justify-content: center;
     position: relative;
