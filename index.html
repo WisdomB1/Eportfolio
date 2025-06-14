@@ -1,233 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Wisdom Bamah</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-        <script src="https://kit.fontawesome.com/6482a74010.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <section id="about_me">
-            <nav>
-                <div class="personal__logo">Wisdom Bamah</div>
-                <ul class="nav__link--list">
-                    <li class="nav__link">
-                        <a href="#languages" class="nav__link--anchor
-                        link__hover-effect
-                        link__hover-effect--black">
-                            Languages
-                        </a>
-                    </li>
-                    <li class="nav__link">
-                        <a href="#projects" class="nav__link--anchor
-                        link__hover-effect
-                        link__hover-effect--black">
-                            Projects
-                        </a>
-                    </li>
-                    <li class="nav__link">
-                        <a href="mailto:bamahngumwisdom100@gmail.com" class="nav__link--anchor
-                        nav__link--anchor-primary">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-                <button class="menu__btn" onclick="openMenu()">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-
-            <div class="menu__backdrop">
-                <button class="menu__btn--close" onclick="closeMenu()">
-                    <i class="fas fa-times"></i>
-                </button>
-                <ul class="menu__link--list">
-                    <li class="nav__link menu__link">
-                        <a href="#languages" onclick="closeMenu()" class="nav__link--anchor
-                        link__hover-effect
-                        link__hover-effect--black
-                        menu__link--anchor">
-                            Languages
-                        </a>
-                    </li>
-                    <li class="nav__link menu__link">
-                        <a href="#projects" onclick="closeMenu()" class="nav__link--anchor
-                        link__hover-effect
-                        link__hover-effect--black
-                        menu__link--anchor">
-                            Projects
-                        </a>
-                    </li>
-                    <li class="nav__link menu__link">
-                        <a href="mailto:bamahngumwisdom100@gmail.com" onclick="closeMenu()" class="nav__link--anchor
-                        nav__link--anchor-primary
-                        menu__link--anchor
-                        menu__link--anchor-primary">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="flex flex-1">
-                <div class="row about-me__info">
-                    <div class="about-me__info--container">
-                        <figure class="about-me__picture--mask">
-                            <img src="assets/photo_me.jpg" alt="My Photo" class="about-me__picture">
-                        </figure>
-                        <h1 class="about-me__info--title">
-                            Hey! I'm <span class="text__color">Wisdom Bamah</span>&nbsp;<span class="wave">👋</span>
-                        </h1>
-                        <p class="about-me__info--text">
-                            I'm a <strong class="text__color">Junior Frontend Developer</strong> with a strong passion for building responsive web applications with great user experiences and a positive impact.
-                        </p>
-                        <div class="about-me__links">
-                            <a href="https://github.com/WisdomB1" target="_blank" class="about-me__link">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                            <a href="mailto:bamahngumwisdom100@gmail.com" class="about-me__link">
-                                <i class="fa-regular fa-envelope"></i>
-                            </a>
-                            <a href="assets/react_certificate.jpeg" target="_blank" class="about-me__link">
-                                <i class="fa-regular fa-file-pdf"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <figure class="about-me__img--container">
-                        <img src="assets/certificate.jpeg" alt="Image" class="about-me__img">
-                    </figure>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/logo_initials.jpg" type="image/jpg">
+    <title>Wisdom Bamah</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6482a74010.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "hGEPMvTd3eJ1ynhmp",
+            });
+        })();
+    </script>
+</head>
+<body>
+    <section id="landing-page" onmousemove="moveBackground(event)">
+        <nav>
+            <figure>
+                <img id="personal-logo" src="assets/logo_initials.jpg" alt="My Logo" />
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black">
+                        About
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="#projects" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black">
+                        Projects
+                    </a>
+                </li>
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black">
+                        Contact
+                    </a>
+                </li>
+                <li class="nav__link click" onclick="toggleContrast()">
+                    <a href="#" class="nav__link--anchor">
+                        <i class="fas fa-adjust"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <header class="header">
+            <div class="header__content">
+                <h1 class="title">Hey</h1>
+                <h1 class="title text__color">I'm Wisdom.</h1>
+                <p class="header__text">
+                    I'm a <strong class="text__color">Front-End Web Developer</strong> with a strong passion for building responsive web applications with great user experiences and a positive impact.
                     <br/>
-                    <figure class="about-me__img--container">
-                        <img src="assets/react_certificate.jpeg" alt="Image" class="about-me__img">
+                    Here's a bit more <strong class="text__color click" onclick="toggleModal()">about me.</strong>
+                </p>
+                <div class="social__list">
+                    <a href="#" class="social__link click">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/WisdomB1" target="_blank" class="social__link click">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="assets/certificates.pdf" target="_blank" class="social__link click">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <a href="#">
+            <button class="mail__btn click" onclick="toggleModal()">
+                <i class="fas fa-envelope"></i>
+            </button>
+        </a>
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's a bit about me</h3>
+                <h4 class="modal__subtitle modal__subtitle--about">Front-End Web Developer</h4>
+                <p class="modal__text">
+                    I am a <strong class="text__color">front-end developer</strong> with a strong passion for developing responsive websites with great <strong class="text__color">user experiences</strong>.
+                    <br/>
+                    As a Full-Stack Web Developer Intern, I learned and worked with a variety of technologies to gain <strong class="text__color">professional skills</strong> and <strong class="text__color">solve problems</strong> as a developer.
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="assets/html_image.png" alt="HTML Image" />
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="assets/css_image.webp" alt="CSS Image" />
+                        <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="assets/js_image.webp" alt="JavaScript Image" />
+                        <span class="language__name">JavaScript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="assets/react_image.svg" alt="React Image" />
+                        <span class="language__name">React</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="assets/bootstrap_image.svg" alt="Bootstrap Image" />
+                        <span class="language__name">Bootstrap</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="assets/python_image.png" alt="Python Image" />
+                        <span class="language__name">Python</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="assets/sql_image.png" alt="SQL Image" />
+                        <span class="language__name">SQL</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="assets/jquery_image.png" alt="JQuery Image" />
+                        <span class="language__name">JQuery</span>
                     </figure>
                 </div>
             </div>
-        </section>
-        <section id="languages">
-            <div class="languages__container">
-                <div class="row">
-                    <h1 class="section__title">This is my <span class="text__color">technology stack</span></h1>
-                    <div class="language__list">
-                        <div class="language">
-                            <figure class="language__img--wrapper">
-                                <img src="assets/html_image.png" alt="HTML Image" class="language__img">
-                            </figure>
-                            <span class="language__name">HTML</span>
-                        </div>
-                        <div class="language">
-                            <figure class="language__img--wrapper">
-                                <img src="assets/css_image.webp" alt="CSS Image" class="language__img">
-                            </figure>
-                            <span class="language__name">CSS</span>
-                        </div>
-                        <div class="language">
-                            <figure class="language__img--wrapper">
-                                <img src="assets/js_image.webp" alt="JavaScript Image" class="language__img">
-                            </figure>
-                            <span class="language__name">JavaScript</span>
-                        </div>
-                        <div class="language">
-                            <figure class="language__img--wrapper">
-                                <img src="assets/react_image.svg" alt="React Image" class="language__img">
-                            </figure>
-                            <span class="language__name">React</span>
-                        </div>
-                        <div class="language">
-                            <figure class="language__img--wrapper">
-                                <img src="assets/bootstrap_image.png" alt="Bootstrap Image" class="language__img bootstrap__img">
-                            </figure>
-                            <span class="language__name">Bootstrap</span>
-                        </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+                <h3 class="modal__subtitle modal__subtitle--contact">I'm currently open to new opportunities</h3>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label" for="name">Name</label>
+                        <input class="input" name="user_name" type="text" id="name" required />
                     </div>
+                    <div class="form__item">
+                        <label class="form__item--label" for="email">Email</label>
+                        <input class="input" name="user_email" type="email" id="email" required />
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label" for="user_message">Message</label>
+                        <textarea class="input" name="message" id="user_message" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">Send it my way</button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message. Looking forward to speaking with you soon.
                 </div>
             </div>
-        </section>
-        <section id="projects">
-            <div class="container">
-                <div class="row">
-                    <h1 class="section__title">Here are some of my <span class="text__color">projects</span></h1>
-                    <ul class="project__list">
-                        <li class="project">
-                            <div class="project__wrapper">
-                                <img class="project__img" src="assets/project img1.png" alt="Project Image">
-                                <div class="project__description">
-                                    <h3 class="project__description--title">Library Project</h3>
-                                    <h4 class="project__description--subtitle">HTML, CSS, JavaScript</h4>
-                                    <p class="project__description--text">
-                                        This project basically demonstrates my basic knowledge and understanding of HTML, CSS, and JavaScript as Frontend Technologies and my ability to build responsive web applications with a great user experience
-                                    </p>
-                                    <div class="project__description--links">
-                                        <a href="https://github.com/WisdomB1" target="_blank" class="project__description--link">
-                                            <i class="fab fa-github"></i>
-                                        </a>
-                                        <a href="https://wisdomb1.github.io/Library-Project/" target="_blank" class="project__description--link" title="Click to view project">
-                                            <i class="fas fa-link"></i>
-                                        </a>
-                                    </div>
+        </div>
+        <img class="shape shape--0" src="assets/semi_circle.svg" alt="bg-shape">
+        <img class="shape shape--1" src="assets/circle.svg" alt="bg-shape">
+        <img class="shape shape--2" src="assets/squiggly.svg" alt="bg-shape">
+        <img class="shape shape--3" src="assets/circle.svg" alt="bg-shape">
+        <img class="shape shape--4" src="assets/triangle.svg" alt="bg-shape">
+        <img class="shape shape--5" src="assets/circle.svg" alt="bg-shape">
+        <img class="shape shape--6" src="assets/squiggly.svg" alt="bg-shape">
+        <img class="shape shape--7" src="assets/circle.svg" alt="bg-shape">
+        <img class="shape shape--8" src="assets/semi_circle.svg" alt="bg-shape">
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">Here are some of my <span class="text__color">projects</span></h1>
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img class="project__img" src="assets/project_img1.png" alt="Project Image">
+                            <div class="project__description">
+                                <h3 class="project__description--title">Library Project</h3>
+                                <h4 class="project__description--subtitle">HTML, CSS, JavaScript</h4>
+                                <p class="project__description--text">
+                                    This project shows off my knowledge and understanding of Frontend Technologies to build dynamic and responsive web pages with a great user interface
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/WisdomB1" target="_blank" class="project__description--link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://wisdomb1.github.io/Library-Project/" target="_blank" class="project__description--link" title="Click to view project">
+                                        <i class="fas fa-link"></i>
+                                    </a>
                                 </div>
                             </div>
-                        </li>
-                        <li class="project">
-                            <div class="project__wrapper">
-                                <img class="project__img" src="assets/project img2.png" alt="Project Image">
-                                <div class="project__description">
-                                    <h3 class="project__description--title">Template Project</h3>
-                                    <h4 class="project__description--subtitle">HTML, CSS, JavaScript</h4>
-                                    <p class="project__description--text">
-                                        This project is a copy of a website's page design, but with a difference in the code, and this project also demonstrates my basic knowledge and understanding of HTML, CSS, and JavaScript as Frontend Technologies
-                                    </p>
-                                    <div class="project__description--links">
-                                        <a href="https://github.com/WisdomB1" target="_blank" class="project__description--link">
-                                            <i class="fab fa-github"></i>
-                                        </a>
-                                        <a href="https://wisdomb1.github.io/Template-Project/" target="_blank" class="project__description--link" title="Click to view project">
-                                            <i class="fas fa-link"></i>
-                                        </a>
-                                    </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img class="project__img" src="assets/project_img2.png" alt="Project Image">
+                            <div class="project__description">
+                                <h3 class="project__description--title">Template Project</h3>
+                                <h4 class="project__description--subtitle">HTML, CSS, JavaScript</h4>
+                                <p class="project__description--text">
+                                    This project demonstrates my ability and skill to create visually appealing and fully responsive websites from scratch to enhance a great user experience
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/WisdomB1" target="_blank" class="project__description--link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://wisdomb1.github.io/Template-Project/" target="_blank" class="project__description--link" title="Click to view project">
+                                        <i class="fas fa-link"></i>
+                                    </a>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
-                </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </section>
-        <footer>
-            <div class="row footer__row">
-                <a href="#" class="footer__anchor">
-                    <figure class="footer__logo">
-                        <img src="assets/logo_initials.jpg" alt="Footer Logo" class="footer__logo--img">
-                    </figure>
-                    <span class="footer__logo--popper">
-                        Top
-                        <i class="fas fa-arrow-up"></i>
-                    </span>
+        </div>
+    </section>
+    <footer>
+        <div class="row footer__row">
+            <a href="#" class="footer__anchor">
+                <figure class="footer__logo">
+                    <img src="assets/logo_initials.jpg" alt="Footer Logo" class="footer__logo--img">
+                </figure>
+                <span class="footer__logo--popper">
+                    Top
+                    <i class="fas fa-arrow-up"></i>
+                </span>
+            </a>
+            <div class="footer__social--list">
+                <a href="https://github.com/WisdomB1" target="_blank" class="footer__social--link
+                link__hover-effect
+                link__hover-effect--white">
+                    GitHub
                 </a>
-                <div class="footer__social--list">
-                    <a href="https://github.com/WisdomB1" target="_blank" class="footer__social--link
-                    link__hover-effect
-                    link__hover-effect--white">
-                        GitHub
-                    </a>
-                    <a href="mailto:bamahngumwisdom100@gmail.com" class="footer__social--link
-                    link__hover-effect
-                    link__hover-effect--white">
-                        Email
-                    </a>
-                    <a href="assets/react_certificate.jpeg" target="_blank" class="footer__social--link
-                    link__hover-effect
-                    link__hover-effect--white">
-                        Certificate
-                    </a>
-                    <a href="javascript:void(0)" title="Thank you for your time" class="footer__social--link
-                    link__hover-effect
-                    link__hover-effect--white">
-                        Thank you!
-                    </a>
-                </div>
-                <div class="footer__copyright">Copyright&copy; 2025 Wisdom Bamah</div>
+                <a href="#" onclick="toggleModal()" class="footer__social--link
+                link__hover-effect
+                link__hover-effect--white">
+                    Contact
+                </a>
+                <a href="assets/certificates.pdf" target="_blank" class="footer__social--link
+                link__hover-effect
+                link__hover-effect--white">
+                    Certificates
+                </a>
+                <a href="javascript:void(0)" title="Thank you for your time" class="footer__social--link
+                link__hover-effect
+                link__hover-effect--white">
+                    Thank you!
+                </a>
             </div>
-        </footer>
-    </body>
+            <div class="footer__copyright">Copyright&copy; 2025 Wisdom Bamah</div>
+        </div>
+    </footer>
+</body>
 </html>
